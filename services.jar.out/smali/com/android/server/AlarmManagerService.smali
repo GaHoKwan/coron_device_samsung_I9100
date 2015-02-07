@@ -3263,6 +3263,8 @@
     invoke-direct {p0, v0}, Lcom/android/server/AlarmManagerService;->setLocked(Lcom/android/server/AlarmManagerService$Alarm;)V
 
     :cond_8
+    invoke-static {p0, v0, v1}, Lcom/android/server/AlarmManagerService$BaiduInjector;->setLockAgain(Lcom/android/server/AlarmManagerService;Lcom/android/server/AlarmManagerService$Alarm;I)V
+
     monitor-exit v6
 
     goto/16 :goto_0

@@ -8,7 +8,8 @@
     value = {
         Lcom/android/server/pm/ShutdownThread$Led;,
         Lcom/android/server/pm/ShutdownThread$Log;,
-        Lcom/android/server/pm/ShutdownThread$CloseDialogReceiver;
+        Lcom/android/server/pm/ShutdownThread$CloseDialogReceiver;,
+        Lcom/android/server/pm/ShutdownThread$BaiduInjector;
     }
 .end annotation
 
@@ -2116,7 +2117,7 @@
     invoke-virtual {v8, v9}, Landroid/view/Window;->setType(I)V
 
     :goto_5
-    invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
+    invoke-static/range {p0 .. p0}, Lcom/android/server/pm/ShutdownThread$BaiduInjector;->showBaiduShutdownOrRebootDialog(Landroid/content/Context;)V
 
     goto/16 :goto_0
 

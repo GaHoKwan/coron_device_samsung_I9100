@@ -12,6 +12,7 @@
     value = {
         Lcom/android/internal/policy/impl/GlobalActions$ConfirmDialogReceiver;,
         Lcom/android/internal/policy/impl/GlobalActions$SilentModeAction;,
+        Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;,
         Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;,
         Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;,
         Lcom/android/internal/policy/impl/GlobalActions$Action;,

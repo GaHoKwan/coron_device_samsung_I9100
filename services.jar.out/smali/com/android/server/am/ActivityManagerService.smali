@@ -76225,7 +76225,7 @@
     invoke-virtual {v2, v0, v1}, Lcom/android/server/am/ActivityStack;->ensureActivitiesVisibleLocked(Lcom/android/server/am/ActivityRecord;I)V
 
     :cond_e
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_baidu_0
 
     move-object/from16 v0, p0
 

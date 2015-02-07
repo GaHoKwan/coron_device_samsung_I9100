@@ -43,6 +43,8 @@
 
 .field private mTurnOn:Z
 
+.field private mObserver:Lcom/android/server/BatteryService$Led$SettingsObserver;
+
 .field final synthetic this$0:Lcom/android/server/BatteryService;
 
 
@@ -178,6 +180,16 @@
     .locals 10
 
     .prologue
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/BatteryService$Led;->updateLightsLockedHook()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_baidu_0
+
+    goto :goto_baidu_0
+
+    :cond_baidu_0
+
     const/16 v9, 0xb
 
     const/4 v8, 0x1
@@ -306,6 +318,7 @@
 
     :cond_1
     :goto_1
+    :goto_baidu_0
     return-void
 
     :cond_2

@@ -150,6 +150,8 @@
 
     invoke-virtual {p0, v1}, Landroid/content/res/AssetManager;->addAssetPath(Ljava/lang/String;)I
 
+    invoke-static/range {p0 .. p0}, Landroid/content/res/BaiduAssetManager$BaiduMultiThemeInjector;->init(Landroid/content/res/AssetManager;)V
+
     invoke-static {}, Landroid/content/res/AssetManager;->ensureSystemAssets()V
 
     monitor-exit p0
@@ -167,7 +169,7 @@
     throw v1
 .end method
 
-.method private constructor <init>(Z)V
+.method constructor <init>(Z)V
     .locals 4
     .parameter "isSystem"
 
@@ -210,6 +212,8 @@
     const-string v1, "/system/framework/framework-newbee-res.apk"
 
     invoke-virtual {p0, v1}, Landroid/content/res/AssetManager;->addAssetPath(Ljava/lang/String;)I
+
+    invoke-static/range {p0 .. p0}, Landroid/content/res/BaiduAssetManager$BaiduMultiThemeInjector;->init(Landroid/content/res/AssetManager;)V
 
     return-void
 .end method

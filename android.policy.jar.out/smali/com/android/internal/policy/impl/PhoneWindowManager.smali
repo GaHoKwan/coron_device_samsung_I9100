@@ -13,6 +13,7 @@
         Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;,
         Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;,
         Lcom/android/internal/policy/impl/PhoneWindowManager$ServiceConnectionForCaptureEffect;,
+        Lcom/android/internal/policy/impl/PhoneWindowManager$BaiduInjector;,
         Lcom/android/internal/policy/impl/PhoneWindowManager$HideNavInputEventReceiver;,
         Lcom/android/internal/policy/impl/PhoneWindowManager$ScreenShotForEffect;,
         Lcom/android/internal/policy/impl/PhoneWindowManager$MyOrientationListenerForPenGesture;,
@@ -6342,6 +6343,8 @@
 
     iput v2, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mSystemTop:I
 
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$BaiduInjector;->setSystemTop(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
+
     :cond_a
     return-void
 
@@ -10791,6 +10794,8 @@
     .line 2004
     :cond_7
     :goto_2
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$BaiduInjector;->flashRegister(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
+
     const-string v8, "vibrator"
 
     invoke-virtual {p1, v8}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -12620,6 +12625,12 @@
 
     .line 3357
     :cond_2b
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p2
+
+    invoke-static {v0, v1}, Lcom/android/internal/policy/impl/PhoneWindowManager$BaiduInjector;->flashOpen(Lcom/android/internal/policy/impl/PhoneWindowManager;Landroid/view/KeyEvent;)V
+
     if-eqz v30, :cond_2c
 
     const/16 v46, 0x7d9
@@ -13406,7 +13417,7 @@
     if-nez v27, :cond_44
 
     .line 3549
-    invoke-direct/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->launchAssistLongPressAction()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->launchAssistLongPressAction()V
 
     goto :goto_11
 
@@ -13436,7 +13447,7 @@
     if-nez v27, :cond_44
 
     .line 3557
-    invoke-direct/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->launchAssistAction()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->launchAssistAction()V
 
     goto :goto_11
 
