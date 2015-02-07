@@ -254,7 +254,7 @@
     .line 134
     new-instance v3, Landroid/view/ContextThemeWrapper;
 
-    const v6, 0x103012b
+    const v6, #android:style@Theme.DeviceDefault.Light#t
 
     invoke-direct {v3, p1, v6}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
@@ -396,7 +396,7 @@
     :cond_0
     new-instance v3, Landroid/view/ContextThemeWrapper;
 
-    const v6, 0x1030128
+    const v6, #android:style@Theme.DeviceDefault#t
 
     invoke-direct {v3, p1, v6}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
@@ -845,13 +845,13 @@
 
     move-result-object v2
 
-    const v3, 0x1040013
+    const v3, #android:string@yes#t
 
     invoke-virtual {v2, v3, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v2
 
-    const v3, 0x1040009
+    const v3, #android:string@no#t
 
     const/4 v4, 0x0
 
@@ -905,7 +905,7 @@
 
     move-result-object v2
 
-    const v3, 0x1110009
+    const v3, #android:bool@config_sf_slowBlur#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1030,15 +1030,15 @@
     .line 217
     new-instance v1, Lcom/android/internal/policy/impl/GlobalActions$1;
 
-    const v3, 0x1080880
+    const v3, #android:drawable@tw_ic_lock_data_enable#t
 
-    const v4, 0x108087f
+    const v4, #android:drawable@tw_ic_lock_data_disable#t
 
-    const v5, 0x10401a6
+    const v5, #android:string@global_action_toggle_data_mode#t
 
-    const v6, 0x10401a7
+    const v6, #android:string@global_action_data_mode_on_status#t
 
-    const v7, 0x10401a8
+    const v7, #android:string@global_action_data_mode_off_status#t
 
     move-object/from16 v2, p0
 
@@ -1051,15 +1051,15 @@
     .line 284
     new-instance v1, Lcom/android/internal/policy/impl/GlobalActions$2;
 
-    const v3, 0x108087d
+    const v3, #android:drawable@tw_ic_lock_airplane_mode#t
 
-    const v4, 0x108087e
+    const v4, #android:drawable@tw_ic_lock_airplane_mode_off#t
 
-    const v5, 0x104019c
+    const v5, #android:string@global_actions_toggle_airplane_mode#t
 
-    const v6, 0x104019d
+    const v6, #android:string@global_actions_airplane_mode_on_status#t
 
-    const v7, 0x104019e
+    const v7, #android:string@global_actions_airplane_mode_off_status#t
 
     move-object/from16 v2, p0
 
@@ -1072,9 +1072,9 @@
     .line 337
     new-instance v1, Lcom/android/internal/policy/impl/GlobalActions$3;
 
-    const v2, 0x10808a2
+    const v2, #android:drawable@tw_ic_settings_accessibility#t
 
-    const v3, 0x10405b6
+    const v3, #android:string@accessibility_binding_label#t
 
     move-object/from16 v0, p0
 
@@ -1087,9 +1087,9 @@
     .line 362
     new-instance v1, Lcom/android/internal/policy/impl/GlobalActions$4;
 
-    const v2, 0x1080881
+    const v2, #android:drawable@tw_ic_lock_power_off#t
 
-    const v3, 0x1040192
+    const v3, #android:string@global_action_power_off#t
 
     move-object/from16 v0, p0
 
@@ -1102,9 +1102,9 @@
     .line 389
     new-instance v1, Lcom/android/internal/policy/impl/GlobalActions$5;
 
-    const v2, 0x1080882
+    const v2, #android:drawable@tw_ic_lock_restart#t
 
-    const v3, 0x1040193
+    const v3, #android:string@global_action_restart#t
 
     move-object/from16 v0, p0
 
@@ -1116,9 +1116,9 @@
 
     new-instance v1, Lcom/android/internal/policy/impl/GlobalActions$16;
 
-    const v2, 0x1080a4f
+    const v2, #android:drawable@tw_ic_lock_screeshot#t
 
-    const v3, 0x104077c
+    const v3, #android:string@screen_capture#t
 
     move-object/from16 v0, p0
 
@@ -1170,6 +1170,8 @@
 
     const/4 v2, 0x4
 
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->addRebootMenu(Lcom/android/internal/policy/impl/GlobalActions;)V
+
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/policy/impl/GlobalActions;->mRestart:Lcom/android/internal/policy/impl/GlobalActions$SinglePressAction;
@@ -1188,11 +1190,13 @@
 
     move-result-object v1
 
+    .line 433
     move-object/from16 v0, p0
 
     iput-object v1, v0, Lcom/android/internal/policy/impl/GlobalActions;->mItems:Ljava/util/ArrayList;
 
-    .line 433
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/GlobalActions$BaiduInjector;->addScreenShotMenu(Lcom/android/internal/policy/impl/GlobalActions;)V
+
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/internal/policy/impl/GlobalActions;->mItems:Ljava/util/ArrayList;
@@ -1274,7 +1278,7 @@
     :goto_2
     new-instance v14, Lcom/android/internal/policy/impl/GlobalActions$6;
 
-    const v2, 0x108036e
+    const v2, #android:drawable@ic_menu_cc#t
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1423,7 +1427,7 @@
 
     move-result-object v1
 
-    const v2, 0x1040190
+    const v2, #android:string@global_actions#t
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -1690,39 +1694,32 @@
 
     invoke-direct {v2, v5}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1141
     .local v2, builder:Landroid/app/AlertDialog$Builder;
-    const v5, 0x10401ad
+    const v5, #android:string@global_action_insert_sim_card#t
 
     invoke-virtual {v2, v5}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1142
-    const v5, 0x10401ae
+    const v5, #android:string@global_action_insert_sim_card_message#t
 
     invoke-virtual {v2, v5}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1143
     invoke-virtual {v2, v4}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
-    .line 1144
-    const v5, 0x104000a
+    const v5, #android:string@ok#t
 
     const/4 v6, 0x0
 
     invoke-virtual {v2, v5, v6}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1146
     invoke-virtual {v2}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v1
 
-    .line 1147
     .local v1, alert:Landroid/app/AlertDialog;
     iget-boolean v5, p0, Lcom/android/internal/policy/impl/GlobalActions;->mKeyguardShowing:Z
 
     if-eqz v5, :cond_2
 
-    .line 1148
     invoke-virtual {v1}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v5
@@ -1871,14 +1868,12 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 508
     iget-object v4, p0, Lcom/android/internal/policy/impl/GlobalActions;->mDialog:Landroid/app/AlertDialog;
 
-    const v5, 0x1040190
+    const v5, #android:string@global_actions#t
 
     invoke-virtual {v4, v5}, Landroid/app/AlertDialog;->setTitle(I)V
 
-    .line 509
     iget-object v4, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v4}, Landroid/media/AudioManager;->getRingerMode()I
@@ -2195,3 +2190,21 @@
 
     goto :goto_0
 .end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$iget-mAudioManager-f1a22f(Lcom/android/internal/policy/impl/GlobalActions;)Landroid/media/AudioManager;
+#    .locals 1
+#    .parameter "x0"
+#    .prologue
+#    iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions;->mAudioManager:Landroid/media/AudioManager;
+#    return-object v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$invoke-refreshSilentMode-a5eb93(Lcom/android/internal/policy/impl/GlobalActions;)V
+#    .locals 0
+#    .parameter "x0"
+#    .prologue
+#    invoke-direct {p0}, Lcom/android/internal/policy/impl/GlobalActions;->refreshSilentMode()V
+#    return-void
+#.end method
