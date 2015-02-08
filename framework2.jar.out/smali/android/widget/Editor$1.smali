@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 247
+    .line 244
     iput-object p1, p0, Landroid/widget/Editor$1;->this$0:Landroid/widget/Editor;
 
     invoke-direct {p0, p2}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
@@ -40,7 +40,7 @@
     .parameter "orientation"
 
     .prologue
-    .line 250
+    .line 247
     :try_start_0
     iget-object v2, p0, Landroid/widget/Editor$1;->this$0:Landroid/widget/Editor;
 
@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    .line 252
+    .line 249
     .local v0, config:Landroid/content/res/Configuration;
     iget v2, v0, Landroid/content/res/Configuration;->orientation:I
 
@@ -74,13 +74,13 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 294
+    .line 291
     .end local v0           #config:Landroid/content/res/Configuration;
     :cond_0
     :goto_0
     return-void
 
-    .line 256
+    .line 253
     .restart local v0       #config:Landroid/content/res/Configuration;
     :cond_1
     new-instance v1, Landroid/os/Handler;
@@ -91,7 +91,7 @@
 
     invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 257
+    .line 254
     .local v1, handler:Landroid/os/Handler;
     new-instance v2, Landroid/widget/Editor$1$1;
 
@@ -99,7 +99,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 268
+    .line 265
     iget-object v2, p0, Landroid/widget/Editor$1;->this$0:Landroid/widget/Editor;
 
     iget v3, v0, Landroid/content/res/Configuration;->orientation:I
@@ -107,13 +107,13 @@
     #setter for: Landroid/widget/Editor;->mLastOrientation:I
     invoke-static {v2, v3}, Landroid/widget/Editor;->access$102(Landroid/widget/Editor;I)I
 
-    .line 269
+    .line 266
     iget-object v2, p0, Landroid/widget/Editor$1;->this$0:Landroid/widget/Editor;
 
     #calls: Landroid/widget/Editor;->updateShowAsAction(Landroid/content/res/Configuration;)V
     invoke-static {v2, v0}, Landroid/widget/Editor;->access$300(Landroid/widget/Editor;Landroid/content/res/Configuration;)V
 
-    .line 273
+    .line 270
     iget-object v2, p0, Landroid/widget/Editor$1;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -125,7 +125,7 @@
 
     if-nez v2, :cond_0
 
-    .line 274
+    .line 271
     iget-object v2, p0, Landroid/widget/Editor$1;->this$0:Landroid/widget/Editor;
 
     #getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
@@ -145,7 +145,7 @@
 
     goto :goto_0
 
-    .line 291
+    .line 288
     .end local v0           #config:Landroid/content/res/Configuration;
     .end local v1           #handler:Landroid/os/Handler;
     :catch_0
