@@ -16820,6 +16820,12 @@
 
     move-object/from16 v0, v19
 
+    move-object/from16 v1, p0
+
+    invoke-virtual {v1, v11}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->updatePlmnOrSpnDisplay(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v11
+
     invoke-virtual {v5, v0, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 1330
